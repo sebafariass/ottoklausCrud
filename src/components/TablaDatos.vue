@@ -45,20 +45,22 @@
                   <v-card-text>
                     <v-container>
                       <v-row>
-                        <v-col cols="12" sm="6" md="4">
+                        <!-- modal edit stock 
+                        columnas asignadas  -->
+                        <v-col cols="12">
                           <v-text-field
-                            label="Nombre Producto"
+                            label="Nombre Stock"
                             v-model="juguetes.data.nombre"
                             required
                           ></v-text-field>
                         </v-col>
-                        <v-col cols="12" sm="6" md="4">
+                        <v-col cols="12">
                           <v-text-field
                             v-model="juguetes.data.codigo"
                             label="Codigo"
                           ></v-text-field>
                         </v-col>
-                        <v-col cols="12" sm="6" md="4">
+                        <v-col cols="12">
                           <v-text-field
                             label="Precio"
                             v-model="juguetes.data.precio"

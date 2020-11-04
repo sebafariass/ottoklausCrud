@@ -1,6 +1,6 @@
 <template>
   <v-app>
-    <h1>Inventario Otto Klaus</h1>
+    <h1>Inventario de Tienda</h1>
  
     <v-main>
       <router-view />

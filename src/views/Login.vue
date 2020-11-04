@@ -1,8 +1,9 @@
 <template>
-  <div class="login">
+
+    <div class="login">
     <p class="text-center">Inicie sesión mediante su cuenta organizativa</p>
     <form @submit.prevent="login" class="formulario">
-      <h2 class="mx-5">Ingresa tus datos</h2>
+      <h2 class="px-5" >Ingresa tus datos</h2>
       <input v-model="usuario" type="text" placeholder="Usuario" />
       <input v-model="contrasena" type="password" placeholder="Password" />
       <v-btn class="ma-2" color="success" @click="loader = 'loading'" type="submit">
@@ -10,6 +11,7 @@
       </v-btn>
     </form>
   </div>
+
 </template>
 
 <script>
@@ -52,6 +54,8 @@ export default {
   .ma-2{
     margin: 20px;
   }
+
+ 
 }
 
 
