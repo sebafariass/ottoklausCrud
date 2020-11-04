@@ -1,58 +1,39 @@
 <template>
   <v-app>
-    <v-app-bar
-      app
-      color="primary"
-      dark
-    >
-      <div class="d-flex align-center">
-        <v-img
-          alt="Vuetify Logo"
-          class="shrink mr-2"
-          contain
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-logo-dark.png"
-          transition="scale-transition"
-          width="40"
-        />
-
-        <v-img
-          alt="Vuetify Name"
-          class="shrink mt-1 hidden-sm-and-down"
-          contain
-          min-width="100"
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-name-dark.png"
-          width="100"
-        />
-      </div>
-
-      <v-spacer></v-spacer>
-
-      
-    </v-app-bar>
-<!-- mediante router-view me dirige a home -->
+    <h1>Inventario Otto Klaus</h1>
+ 
     <v-main>
-  <router-view />
+      <router-view />
     </v-main>
   </v-app>
 </template>
 
 <script>
 
-import { mapActions} from "vuex";
+import { mapActions } from "vuex";
+import firebase from 'firebase'
+
 export default {
   name: 'App',
 
+  created () {
+    this.getData();
+  },
 
-
-  // data: () => ({
-  //   //
-  // }),
-created(){
- this.get_data();
-},
-methods: {
-  ...mapActions("Datos", ["get_data"])
-}
+  
+  methods: {
+    ...mapActions("Datos", ["getData"])
+  },
 
 };
 </script>
+
+<style lang="scss">
+h1{
+
+  text-align: center;
+}
+
+
+
+</style>
